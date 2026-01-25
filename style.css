@@ -894,36 +894,297 @@ body::before {
 }
 
 /* Mobile Optimization */
-@media (max-width: 600px) {
-    .title {
-        font-size: 1.8rem;
-    }
 
-    .tagline {
-        font-size: 1.1rem;
-    }
-
-    .instructions {
-        font-size: 1rem;
-    }
-
-    .game-area {
-        height: 200px;
-        touch-action: manipulation;
-    }
-
-    .btn {
-        padding: 12px 30px;
-        font-size: 1rem;
-    }
-
-    #reactionTime {
-        font-size: 1.6rem;
+/* Tablet and small laptops */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
     }
 
     .container {
-        padding: 25px 15px;
+        padding: 35px 20px;
+        margin: 15px;
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .game-area {
+        height: 220px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 25px 20px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .container {
+        padding: 20px 15px;
         margin: 10px;
+        border-radius: 15px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .tagline {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .instructions {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        padding: 0 5px;
+    }
+
+    .keyboard-hint {
+        display: none;
+        /* Hide on mobile - not relevant */
+    }
+
+    /* Header buttons - larger touch targets */
+    .header-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        top: 10px;
+    }
+
+    .sound-toggle {
+        right: 10px;
+    }
+
+    .stats-btn {
+        left: 10px;
+    }
+
+    /* Difficulty buttons - better touch targets */
+    .difficulty-container {
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .btn-difficulty {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+
+    /* Game area - taller for easier tapping */
+    .game-area {
+        height: 180px;
+        margin: 15px 0;
+        border-radius: 15px;
+        touch-action: manipulation;
+    }
+
+    #gameMessage {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    /* Buttons - larger touch targets */
+    .btn {
+        padding: 14px 35px;
+        font-size: 1rem;
+        margin: 8px 5px;
+        min-height: 48px;
+        /* Minimum touch target */
+    }
+
+    .btn-start {
+        animation: none;
+        /* Disable bounce on mobile for performance */
+    }
+
+    /* Results area */
+    .result-area {
+        padding: 12px 10px;
+        margin: 15px 0;
+    }
+
+    #reactionTime {
+        font-size: 1.5rem;
+    }
+
+    #feedback {
+        font-size: 1rem;
+    }
+
+    .best-score {
+        font-size: 0.9rem;
+    }
+
+    .attempt-count {
+        font-size: 0.85rem;
+    }
+
+    .average-score {
+        font-size: 0.85rem;
+    }
+
+    /* F1 Comparison - compact */
+    .comparison-container {
+        padding: 8px;
+        margin-top: 15px;
+    }
+
+    .comparison-label {
+        font-size: 0.7rem;
+    }
+
+    /* Leaderboard - compact */
+    .leaderboard {
+        padding: 12px;
+        margin-top: 15px;
+    }
+
+    .leaderboard h3 {
+        font-size: 1rem;
+    }
+
+    .leaderboard li {
+        font-size: 0.85rem;
+        padding: 4px 0;
+    }
+
+    /* Modal optimization */
+    .modal-content {
+        width: 95%;
+        padding: 20px 15px;
+        border-radius: 15px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .stats-summary {
+        margin: 15px 0;
+    }
+
+    .stat-value {
+        font-size: 1.3rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .stats-chart {
+        height: 120px;
+    }
+
+    /* Footer */
+    .footer {
+        margin-top: 20px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small phones (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .container {
+        padding: 15px 10px;
+        margin: 5px;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+
+    .instructions {
+        font-size: 0.85rem;
+    }
+
+    .btn-difficulty {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .game-area {
+        height: 150px;
+    }
+
+    #gameMessage {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    #reactionTime {
+        font-size: 1.3rem;
+    }
+
+    .leaderboard {
+        padding: 10px;
+    }
+}
+
+/* Landscape mode on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+
+    .instructions {
+        margin-bottom: 10px;
+    }
+
+    .game-area {
+        height: 120px;
+        margin: 10px 0;
+    }
+
+    .result-area {
+        padding: 8px;
+        margin: 10px 0;
+    }
+
+    .leaderboard {
+        display: none;
+        /* Hide in landscape for space */
+    }
+
+    .comparison-container {
+        margin-top: 10px;
     }
 }
 
