@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Test your reaction speed! How fast can you click when the color changes? Compare your time with F1 drivers.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Reaction Speed Test ⚡">
+    <meta property="og:description"
+        content="Test your reaction speed! How fast can you click? Compare with F1 drivers! 🏎️">
+    <meta property="og:url" content="https://reaction-speed-test.vercel.app/">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Reaction Speed Test ⚡">
+    <meta property="twitter:description"
+        content="Test your reaction speed! How fast can you click? Compare with F1 drivers! 🏎️">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <title>Reaction Speed Test</title>
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Controls -->
+        <button id="statsBtn" class="header-btn stats-btn" title="View Statistics">📊</button>
+        <button id="soundToggle" class="header-btn sound-toggle" title="Toggle Sound">🔊</button>
+
+        <!-- Stats Modal -->
+        <div id="statsModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close-btn">&times;</span>
+                <h2>📊 Session Statistics</h2>
+                <div class="stats-summary">
+                    <div class="stat-box">
+                        <span class="stat-label">Best</span>
+                        <span id="modalBest" class="stat-value">--</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Avg</span>
+                        <span id="modalAvg" class="stat-value">--</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Total</span>
+                        <span id="modalCount" class="stat-value">0</span>
+                    </div>
+                </div>
+                <h3>Recent Trend (Last 10)</h3>
+                <div id="statsChart" class="stats-chart">
+                    <!-- Bars will be inserted by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Title -->
+        <h1 class="title">⚡ Reaction Speed Test</h1>
+        <p class="tagline">🎯 How fast are your reflexes? 🎯</p>
+
+        <!-- Instructions -->
+        <p class="instructions">Click the green area as fast as you can when the color changes!</p>
+
+
+
+        <!-- Difficulty Selection -->
+        <div class="difficulty-container">
+            <button class="btn-difficulty" data-mode="easy">Easy</button>
+            <button class="btn-difficulty active" data-mode="normal">Normal</button>
+            <button class="btn-difficulty" data-mode="hard">Hard</button>
+        </div>
+
+        <!-- Start Button -->
+        <button id="startBtn" class="btn btn-start">Start Game</button>
+        <p class="keyboard-hint">⌨️ Or press <span class="key">SPACEBAR</span> to play</p>
+
+        <!-- Game Area (Click Zone) -->
+        <div id="gameArea" class="game-area">
+            <p id="gameMessage">Click "Start Game" to begin</p>
+        </div>
+
+        <!-- Result Display -->
+        <div id="resultArea" class="result-area">
+            <p id="reactionTime"></p>
+            <p id="feedback"></p>
+            <p id="bestScore" class="best-score"></p>
+            <p id="attemptCount" class="attempt-count">Attempts: 0</p>
+            <p id="averageScore" class="average-score"></p>
+
+            <!-- F1 Comparison Bar -->
+            <div id="comparisonContainer" class="comparison-container" style="display: none;">
+                <div class="comparison-label">
+                    <span>You</span>
+                    <span>vs</span>
+                    <span>F1 Driver (200ms)</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="userMarker" class="marker user-marker"></div>
+                    <div class="marker f1-marker" style="left: 20%;"></div> <!-- Assuming 1000ms scale, 200ms is 20% -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Retry Button (hidden initially) -->
+        <button id="retryBtn" class="btn btn-retry" style="display: none;">Try Again</button>
+        <button id="shareBtn" class="btn btn-share" style="display: none;">📋 Share Score</button>
+
+        <!-- Leaderboard -->
+        <div id="leaderboard" class="leaderboard">
+            <h3>🏆 Top 5 Scores</h3>
+            <ol id="leaderboardList"></ol>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Created with ⚡ by <a href="https://github.com/ashish" target="_blank">Ashu</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
