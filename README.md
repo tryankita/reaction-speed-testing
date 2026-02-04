@@ -2,9 +2,6 @@
 
 A fast-paced reaction time game that measures how quickly you can respond to visual stimuli.
 
-## 🎯 Target Age Group
-12–18 years (Teenagers)
-
 ## 🕹️ How to Play
 1. Click **Start Game**
 2. Wait for the box to turn **green**
