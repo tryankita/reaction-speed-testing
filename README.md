@@ -44,6 +44,3 @@ just open index.html in a browser.
 ## author
 
 made by ashu
-
----
-*Made with ⚡ and JavaScript*
