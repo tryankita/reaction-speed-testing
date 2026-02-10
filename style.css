@@ -6,22 +6,22 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f5f5f5;
+    flex-direction: column;
+    background: #fff;
     color: #222;
-    padding: 20px;
+    overflow: hidden;
 }
 
 .wrapper {
-    background: #fff;
-    border-radius: 12px;
-    padding: 40px 30px;
-    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 30px 32px 20px;
+    max-width: 600px;
     width: 100%;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    margin: 0 auto;
 }
 
 h1 {
@@ -47,7 +47,8 @@ h1 {
 /* the game box */
 .box {
     width: 100%;
-    height: 200px;
+    flex: 1;
+    min-height: 120px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -219,16 +220,11 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-    body { padding: 10px; }
-
     .wrapper {
-        padding: 28px 18px;
-        border-radius: 10px;
+        padding: 20px 16px 14px;
     }
 
     h1 { font-size: 1.45rem; }
-
-    .box { height: 160px; }
 
     .time-display { font-size: 1.8rem; }
 
