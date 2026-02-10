@@ -1,52 +1,49 @@
-# 🎮 Reaction Speed Test
+# reaction speed test
 
-A fast-paced reaction time game that measures how quickly you can respond to visual stimuli.
+a simple browser game to test how fast you can react. click the box when it turns green, try to beat your best time.
 
-## 🎯 Target Age Group
-12–18 years (Teenagers)
+## how to play
 
-## 🕹️ How to Play
-1. Click **Start Game**
-2. Wait for the box to turn **green**
-3. Click as fast as you can!
-4. See your reaction time in **milliseconds**
+1. hit start
+2. wait... the box will turn red first
+3. when it goes green, click it
+4. your time shows up in milliseconds
 
-## ⏱️ Scoring
-| Time | Rating |
-|------|--------|
-| < 200ms | 🔥 Excellent! |
-| 200-300ms | 👍 Good! |
-| > 300ms | 😅 Try Again! |
+## scoring
 
-## ⭐ Features
-- ✅ Random delay (prevents guessing)
-- ✅ Millisecond precision timing
-- ✅ Instant feedback messages
-- ✅ "Too early" detection
-- ✅ Best score saved (localStorage)
-- ✅ Retry functionality
-- ✅ Neon/dark theme design
+- under 180ms = insane
+- 180-230ms = really fast
+- 230-300ms = pretty good
+- 300-400ms = decent
+- 400ms+ = keep trying
 
-## 🛠️ Technologies
-- **HTML** - Structure
-- **CSS** - Styling & animations
-- **JavaScript** - Game logic
+## features
 
-## 📂 Files
+- random delay so you can't just guess
+- catches you if you click too early
+- saves your best score
+- tracks your average across attempts
+- spacebar works too
+
+## tech
+
+plain html + css + js, no frameworks, no libraries. runs in any browser.
+
+## files
+
 ```
-reaction-speed-test/
-├── index.html    ← Main page
-├── style.css     ← Styling
-├── script.js     ← Game logic
-└── README.md     ← This file
+index.html  - the page
+style.css   - how it looks
+script.js   - the game
 ```
 
-## 🚀 How to Run
-1. Open `index.html` in any browser
-2. Start playing!
+## run it
 
-## 👨‍💻 Author
-Created for School Project
+just open index.html in a browser.
+
+## author
+
+made by ashu
 
 ---
 *Made with ⚡ and JavaScript*
